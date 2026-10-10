@@ -28,14 +28,14 @@
     </dataSet_5>
 
     <!-- Terms with no matching product: expect zero results -->
-    <dataSet_40>
+    <dataSet_6>
         <searchTerm>zzz_not_a_product</searchTerm>
         <expectedFragment></expectedFragment>
         <shouldFindResults>false</shouldFindResults>
-    </dataSet_40>
-    <dataSet_41>
+    </dataSet_6>
+    <dataSet_7>
         <searchTerm>Laptop</searchTerm>
         <expectedFragment></expectedFragment>
         <shouldFindResults>false</shouldFindResults>
-    </dataSet_41>
+    </dataSet_7>
 </dataSets>
