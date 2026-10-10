@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSets>
+    <!-- Broad keywords: several products match each one -->
+    <dataSet_1>
+        <searchTerm>Top</searchTerm>
+        <expectedFragment>Top</expectedFragment>
+        <shouldFindResults>true</shouldFindResults>
+    </dataSet_1>
+    <dataSet_2>
+        <searchTerm>Dress</searchTerm>
+        <expectedFragment>Dress</expectedFragment>
+        <shouldFindResults>true</shouldFindResults>
+    </dataSet_2>
+    <dataSet_3>
+        <searchTerm>Tshirt</searchTerm>
+        <expectedFragment>Tshirt</expectedFragment>
+        <shouldFindResults>true</shouldFindResults>
+    </dataSet_3>
+    <dataSet_4>
+        <searchTerm>Jeans</searchTerm>
+        <expectedFragment>Jeans</expectedFragment>
+        <shouldFindResults>true</shouldFindResults>
+    </dataSet_4>
+    <dataSet_5>
+        <searchTerm>Saree</searchTerm>
+        <expectedFragment>Saree</expectedFragment>
+        <shouldFindResults>true</shouldFindResults>
+    </dataSet_5>
+
+    <!-- Terms with no matching product: expect zero results -->
+    <dataSet_40>
+        <searchTerm>zzz_not_a_product</searchTerm>
+        <expectedFragment></expectedFragment>
+        <shouldFindResults>false</shouldFindResults>
+    </dataSet_40>
+    <dataSet_41>
+        <searchTerm>Laptop</searchTerm>
+        <expectedFragment></expectedFragment>
+        <shouldFindResults>false</shouldFindResults>
+    </dataSet_41>
+</dataSets>
