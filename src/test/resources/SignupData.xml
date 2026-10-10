@@ -1,0 +1,81 @@
+<dataSets>
+    <dataSet_1>
+        <title>Mrs</title>
+        <name>Diana Test</name>
+        <email>diana.test@example.com</email>
+        <password>Test1234!</password>
+        <day>10</day>
+        <month>October</month>
+        <year>1990</year>
+        <firstName>Diana</firstName>
+        <lastName>Test</lastName>
+        <address>Str. Test 1</address>
+        <country>Canada</country>
+        <state>Ontario</state>
+        <city>Toronto</city>
+        <zipcode>M5V1A1</zipcode>
+        <mobileNumber>0712345678</mobileNumber>
+        <newsletter>true</newsletter>
+        <partnerOffers>false</partnerOffers>
+    </dataSet_1>
+
+    <dataSet_2>
+        <title>Mr</title>
+        <name>John Smith</name>
+        <email>john.smith@example.com</email>
+        <password>Smith2024!</password>
+        <day>3</day>
+        <month>March</month>
+        <year>1985</year>
+        <firstName>John</firstName>
+        <lastName>Smith</lastName>
+        <address>221B Baker Street</address>
+        <country>United States</country>
+        <state>California</state>
+        <city>Los Angeles</city>
+        <zipcode>90001</zipcode>
+        <mobileNumber>5550123456</mobileNumber>
+        <newsletter>false</newsletter>
+        <partnerOffers>true</partnerOffers>
+    </dataSet_2>
+
+    <dataSet_3>
+        <title>Mrs</title>
+        <name>Priya Sharma</name>
+        <email>priya.sharma@example.com</email>
+        <password>Priya5678!</password>
+        <day>21</day>
+        <month>July</month>
+        <year>1995</year>
+        <firstName>Priya</firstName>
+        <lastName>Sharma</lastName>
+        <address>12 MG Road</address>
+        <country>India</country>
+        <state>Karnataka</state>
+        <city>Bengaluru</city>
+        <zipcode>560001</zipcode>
+        <mobileNumber>9876543210</mobileNumber>
+        <newsletter>true</newsletter>
+        <partnerOffers>true</partnerOffers>
+    </dataSet_3>
+
+    <dataSet_4>
+        <title>Mr</title>
+        <name>Liam Brown</name>
+        <email>liam.brown@example.com</email>
+        <password>Liam9999!</password>
+        <day>15</day>
+        <month>December</month>
+        <year>1978</year>
+        <firstName>Liam</firstName>
+        <lastName>Brown</lastName>
+        <address>8 Queen Street</address>
+        <country>Australia</country>
+        <state>New South Wales</state>
+        <city>Sydney</city>
+        <zipcode>2000</zipcode>
+        <mobileNumber>0400111222</mobileNumber>
+        <newsletter>false</newsletter>
+        <partnerOffers>false</partnerOffers>
+    </dataSet_4>
+</dataSets>

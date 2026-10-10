@@ -18,7 +18,7 @@ public class ProductsSearchTest extends TestBasePage {
     public void searchProductTest() {
 
         productsSearchDataMap = XmlDataLoader.loadData("src/test/resources/ProductsSearchData.xml", ProductsSearchData.class);
-        ProductsSearchData data = productsSearchDataMap.get("dataSet_1");
+        ProductsSearchData data = productsSearchDataMap.get("dataSet_2");
 
         HomepagePage homePage = new HomepagePage(getDriver());
         homePage.handleConsentPopup();

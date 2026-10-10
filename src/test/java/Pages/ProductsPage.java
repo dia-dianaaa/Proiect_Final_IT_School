@@ -17,6 +17,7 @@ public class ProductsPage {
 
     WebDriver driver;
     ElementMethods elementMethods;
+
     @FindBy(id = "search_product")
     WebElement searchBar;
     @FindBy(id = "submit_search")

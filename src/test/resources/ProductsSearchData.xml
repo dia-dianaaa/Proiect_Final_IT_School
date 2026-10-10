@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <dataSets>
     <!-- Broad keywords: several products match each one -->
     <dataSet_1>
@@ -6,21 +5,25 @@
         <expectedFragment>Top</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_1>
+
     <dataSet_2>
         <productSearch>Dress</productSearch>
         <expectedFragment>Dress</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_2>
+
     <dataSet_3>
         <productSearch>Tshirt</productSearch>
         <expectedFragment>Tshirt</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_3>
+
     <dataSet_4>
         <productSearch>Jeans</productSearch>
         <expectedFragment>Jeans</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_4>
+
     <dataSet_5>
         <productSearch>Saree</productSearch>
         <expectedFragment>Saree</expectedFragment>
@@ -33,6 +36,7 @@
         <expectedFragment></expectedFragment>
         <shouldFindResults>false</shouldFindResults>
     </dataSet_6>
+
     <dataSet_7>
         <productSearch>Laptop</productSearch>
         <expectedFragment></expectedFragment>
