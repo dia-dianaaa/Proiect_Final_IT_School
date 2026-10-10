@@ -16,7 +16,7 @@ public class ElementMethods {
         this.driver = driver;
     }
 
-    private void waitVisibility(WebElement element) {
+    public void waitVisibility(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(element));
     }

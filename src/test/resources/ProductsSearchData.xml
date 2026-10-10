@@ -2,39 +2,39 @@
 <dataSets>
     <!-- Broad keywords: several products match each one -->
     <dataSet_1>
-        <searchTerm>Top</searchTerm>
+        <productSearch>Top</productSearch>
         <expectedFragment>Top</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_1>
     <dataSet_2>
-        <searchTerm>Dress</searchTerm>
+        <productSearch>Dress</productSearch>
         <expectedFragment>Dress</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_2>
     <dataSet_3>
-        <searchTerm>Tshirt</searchTerm>
+        <productSearch>Tshirt</productSearch>
         <expectedFragment>Tshirt</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_3>
     <dataSet_4>
-        <searchTerm>Jeans</searchTerm>
+        <productSearch>Jeans</productSearch>
         <expectedFragment>Jeans</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_4>
     <dataSet_5>
-        <searchTerm>Saree</searchTerm>
+        <productSearch>Saree</productSearch>
         <expectedFragment>Saree</expectedFragment>
         <shouldFindResults>true</shouldFindResults>
     </dataSet_5>
 
     <!-- Terms with no matching product: expect zero results -->
     <dataSet_6>
-        <searchTerm>zzz_not_a_product</searchTerm>
+        <productSearch>zzz_not_a_product</productSearch>
         <expectedFragment></expectedFragment>
         <shouldFindResults>false</shouldFindResults>
     </dataSet_6>
     <dataSet_7>
-        <searchTerm>Laptop</searchTerm>
+        <productSearch>Laptop</productSearch>
         <expectedFragment></expectedFragment>
         <shouldFindResults>false</shouldFindResults>
     </dataSet_7>

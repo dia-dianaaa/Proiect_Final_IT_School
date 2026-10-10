@@ -6,7 +6,7 @@ public class BrowserFactory {
 
     public WebDriver getBrowserFactory() {
 
-        String browser = System.getProperty("browser"); //cand ruleaza programul isi ia anumite proprietati - se ia din pomxml
+        String browser = System.getProperty("browser");
 
         switch(browser){
             case BrowserType.BROWSER_CHROME:

@@ -89,7 +89,7 @@
                             <suiteXmlFile>${suiteXmlFile}.xml</suiteXmlFile>
                         </suiteXmlFiles>
                         <systemPropertyVariables>
-                            <browser>edge</browser>
+                            <browser>chrome</browser>
                             <ci_cd>false</ci_cd>
                         </systemPropertyVariables>
                     </configuration>
