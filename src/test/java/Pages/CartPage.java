@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartPage {
@@ -33,17 +34,24 @@ public class CartPage {
 
     public void verifyProducts(List<String> expectedNames) {
         elementMethods.waitVisibility(proceedToCheckoutButton);
+
+        List<String> cartNames = new ArrayList<>();
+        for (WebElement cartName : cartProductNames) {
+            cartNames.add(cartName.getText());
+        }
         Assert.assertEquals(cartRows.size(), expectedNames.size(),
-                "The cart should have one row per product");
+                "The cart should have one row per product. Cart shows: " + cartNames);
+
         for (String expected : expectedNames) {
             boolean found = false;
-            for (WebElement cartName : cartProductNames) {
-                if (clean(cartName.getText()).equals(expected)) {
+            for (String actual : cartNames) {
+                if (clean(actual).equals(clean(expected))) {
                     found = true;
                     break;
                 }
             }
-            Assert.assertTrue(found, "The cart is missing: " + expected);
+            Assert.assertTrue(found,
+                    "The cart is missing: [" + expected + "]. Cart shows: " + cartNames);
         }
     }
 

@@ -2,11 +2,17 @@ package SharedData.Browser;
 
 import Logger.LoggerUtility;
 import org.apache.logging.log4j.ThreadContext;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class TestBasePage {
 
@@ -37,6 +43,19 @@ public class TestBasePage {
         }
         LoggerUtility.infoTestCase("===== The browser closed successfully");
         LoggerUtility.endTestCase(testName);
+    }
+
+    private void saveScreenshot(ITestResult result) {
+        try {
+            Path folder = Paths.get("target", "screenshots");
+            Files.createDirectories(folder);
+            byte[] image = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            Path file = folder.resolve(testName + "_" + result.getName() + "_" + System.currentTimeMillis() + ".png");
+            Files.write(file, image);
+            LoggerUtility.infoTestCase("Screenshot saved: " + file.toAbsolutePath());
+        } catch (Exception e) {
+            LoggerUtility.errorLog("Could not save screenshot: " + e.getMessage());
+        }
     }
 
     @AfterSuite
