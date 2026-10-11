@@ -1,6 +1,7 @@
 package Pages;
 
 import HelperMethods.ElementMethods;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -45,5 +46,29 @@ public class CartPage {
     public void clickProceedToCheckout() {
         elementMethods.clickOnElement(proceedToCheckoutButton);
     }
+
+    public WebElement findRow(String productName) {
+        return driver.findElement(By.xpath(
+                "//table[@id='cart_info_table']/tbody/tr[.//td[@class='cart_description']//a[normalize-space()='"
+                        + productName + "']]"));
+    }
+
+    public void removeProduct(String productName) {
+        WebElement row = findRow(productName);
+        WebElement deleteButton = row.findElement(By.xpath(".//a[contains(@class,'cart_quantity_delete')]"));
+        elementMethods.clickOnElement(deleteButton);
+        elementMethods.waitInvisibility(row);
+    }
+
+    public void verifyProductRemoved(String productName, int remainingRows) {
+        Assert.assertEquals(cartRows.size(), remainingRows,
+                "The cart should have " + remainingRows + " row(s) after removing " + productName);
+        for (WebElement cartName : cartProductNames) {
+            Assert.assertNotEquals(cartName.getText(), productName,
+                    "The product is still in the cart: " + productName);
+        }
+    }
+
+
 }
 

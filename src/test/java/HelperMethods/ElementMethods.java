@@ -27,15 +27,6 @@ public class ElementMethods {
         element.click();
     }
 
-    public void selectElementFromListByText(List<WebElement> listWebElement, String text) {
-        for (int i = 0; i < listWebElement.size(); i++) {
-            if (listWebElement.get(i).getText().equals(text)) {
-                clickOnElement(listWebElement.get(i));
-                break;
-            }
-        }
-    }
-
     public void enterText(WebElement element, String text) {
         waitVisibility(element);
         element.clear();
@@ -45,5 +36,10 @@ public class ElementMethods {
     public void hoverOverElement(WebElement element) {
         waitVisibility(element);
         new Actions(driver).moveToElement(element).perform();
+    }
+
+    public void waitInvisibility(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOf(element));
     }
 }
