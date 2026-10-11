@@ -24,11 +24,12 @@ public class ProductsPage {
     WebElement searchButton;
     @FindBy(xpath = "//div[@class='features_items']//div[@class='productinfo text-center']/p")
     List<WebElement> productNames;
-    @FindBy(xpath = "//div[@class='features_items']//a[contains(text(),'View Product')]")
-    List<WebElement> viewProductLinks;
+    @FindBy(xpath = "//div[@class='features_items']//div[@class='product-image-wrapper']")
+    List<WebElement> productCards;
+    @FindBy(xpath = "//button[contains(@class,'close-modal')]")
+    WebElement continueShoppingButton;
 
-
-    public ProductsPage (WebDriver driver) {
+    public ProductsPage(WebDriver driver) {
         this.driver = driver;
         this.elementMethods = new ElementMethods(driver);
         PageFactory.initElements(driver, this);
@@ -56,8 +57,26 @@ public class ProductsPage {
         }
     }
 
-    public void openFirstProduct() {
-        elementMethods.clickOnElement(viewProductLinks.get(0));
+    public String addFirstResultToCart() {
+        WebElement card = productCards.getFirst();
+        String name = card.findElement(By.xpath(".//div[@class='productinfo text-center']/p")).getText();
+
+        elementMethods.hoverOverElement(card);
+
+        WebElement addButton = card.findElement(By.xpath(".//a[contains(@class,'add-to-cart')]"));
+        elementMethods.clickOnElement(addButton);
+        return name;
+    }
+
+    public void clickContinueShopping() {
+        elementMethods.clickOnElement(continueShoppingButton);
+    }
+
+    public String addProductFromSearch(String searchTerm) {
+        searchProduct(searchTerm);
+        String name = addFirstResultToCart();
+        clickContinueShopping();
+        return name;
     }
 
 }

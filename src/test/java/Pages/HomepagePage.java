@@ -15,25 +15,19 @@ import java.time.Duration;
 public class HomepagePage {
     WebDriver driver;
     ElementMethods elementMethods;
-    @FindBy(xpath = "//a[@href='/']")
-    WebElement homeHeading;
     @FindBy(xpath = "//a[@href='/login']")
     WebElement signupLogin;
     @FindBy(xpath = "//a[@href='/products']")
     WebElement products;
     @FindBy(xpath = "//a[@href='/view_cart']")
     WebElement cart;
-    @FindBy(xpath = "//a[@href='/contact_us']")
-    WebElement contactUs;
+    @FindBy(xpath = "//a[@href='/delete_account']")
+    WebElement deleteAccount;
 
     public HomepagePage (WebDriver driver) {
         this.driver = driver;
         this.elementMethods = new ElementMethods(driver);
         PageFactory.initElements(driver, this);
-    }
-
-    public void clickHomeHeading() {
-        elementMethods.clickOnElement(homeHeading);
     }
 
     public void clickSignupLogin() {
@@ -42,6 +36,15 @@ public class HomepagePage {
 
     public void clickProducts() {
         elementMethods.clickOnElement(products);
+    }
+
+    public void clickCart() {
+        elementMethods.clickOnElement(cart);
+    }
+
+
+    public void clickDeleteAccount() {
+        elementMethods.clickOnElement(deleteAccount);
     }
 
     public void handleConsentPopup() {

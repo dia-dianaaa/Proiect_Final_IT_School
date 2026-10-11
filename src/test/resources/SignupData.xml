@@ -9,7 +9,9 @@
         <year>1990</year>
         <firstName>Diana</firstName>
         <lastName>Test</lastName>
+        <company>Test Company SRL</company>
         <address>Str. Test 1</address>
+        <address2>Apt 4</address2>
         <country>Canada</country>
         <state>Ontario</state>
         <city>Toronto</city>
@@ -29,7 +31,9 @@
         <year>1985</year>
         <firstName>John</firstName>
         <lastName>Smith</lastName>
+        <company></company>
         <address>221B Baker Street</address>
+        <address2></address2>
         <country>United States</country>
         <state>California</state>
         <city>Los Angeles</city>
@@ -49,7 +53,9 @@
         <year>1995</year>
         <firstName>Priya</firstName>
         <lastName>Sharma</lastName>
+        <company>Sharma Tech</company>
         <address>12 MG Road</address>
+        <address2></address2>
         <country>India</country>
         <state>Karnataka</state>
         <city>Bengaluru</city>
@@ -69,7 +75,9 @@
         <year>1978</year>
         <firstName>Liam</firstName>
         <lastName>Brown</lastName>
+        <company>Brown Co</company>
         <address>8 Queen Street</address>
+        <address2>Unit 2</address2>
         <country>Australia</country>
         <state>New South Wales</state>
         <city>Sydney</city>

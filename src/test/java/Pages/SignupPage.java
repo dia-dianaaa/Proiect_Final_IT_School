@@ -14,9 +14,9 @@ public class SignupPage {
     ElementMethods elementMethods;
     SignupFormMethods signupFormMethods;
 
-    @FindBy(id = "id_gender1")
+    @FindBy(xpath = "//label[@for='id_gender1']")
     WebElement titleMr;
-    @FindBy(xpath = "id_gender2")
+    @FindBy(xpath = "//label[@for='id_gender2']")
     WebElement titleMrs;
     @FindBy(id = "password")
     WebElement password;
@@ -34,8 +34,12 @@ public class SignupPage {
     WebElement firstName;
     @FindBy(id = "last_name")
     WebElement lastName;
+    @FindBy(id = "company")
+    WebElement company;
     @FindBy(id = "address1")
     WebElement address;
+    @FindBy(id = "address2")
+    WebElement address2;
     @FindBy(id = "country")
     WebElement country;
     @FindBy(id = "state")
@@ -49,7 +53,7 @@ public class SignupPage {
     @FindBy(xpath = "//button[@data-qa='create-account']")
     WebElement createAccountButton;
 
-    public void SignupPage(WebDriver driver) {
+    public SignupPage(WebDriver driver) {
         this.driver = driver;
         this.elementMethods = new ElementMethods(driver);
         this.signupFormMethods = new SignupFormMethods(driver);
@@ -68,10 +72,28 @@ public class SignupPage {
 
     public void createAccount(SignupData data) {
         selectTitle(data.getTitle());
+
         elementMethods.enterText(password, data.getPassword());
+
         signupFormMethods.selectDropdownByText(days, data.getDay());
         signupFormMethods.selectDropdownByText(months, data.getMonth());
         signupFormMethods.selectDropdownByText(years, data.getYear());
+        signupFormMethods.setCheckbox(newsletterCheckbox, data.getNewsletter());
+        signupFormMethods.setCheckbox(partnerOffersCheckbox, data.getPartnerOffers());
 
+        elementMethods.enterText(firstName, data.getFirstName());
+        elementMethods.enterText(lastName, data.getLastName());
+        elementMethods.enterText(company, data.getCompany());
+        elementMethods.enterText(address, data.getAddress());
+        elementMethods.enterText(address2, data.getAddress2());
+
+        signupFormMethods.selectDropdownByText(country, data.getCountry());
+        elementMethods.enterText(state, data.getState());
+        elementMethods.enterText(city, data.getCity());
+        elementMethods.enterText(zipcode, data.getZipcode());
+        elementMethods.enterText(mobileNumber, data.getMobileNumber());
+
+        elementMethods.clickOnElement(createAccountButton);
+    }
 
 }

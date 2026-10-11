@@ -26,5 +26,6 @@ public class ProductsSearchTest extends TestBasePage {
 
         ProductsPage productsPage = new ProductsPage(getDriver());
         productsPage.searchProduct(data.getProductSearch());
+        productsPage.verifySearchResults(data);
     }
 }

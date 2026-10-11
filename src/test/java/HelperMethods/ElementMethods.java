@@ -2,6 +2,7 @@ package HelperMethods;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -39,5 +40,10 @@ public class ElementMethods {
         waitVisibility(element);
         element.clear();
         element.sendKeys(text);
+    }
+
+    public void hoverOverElement(WebElement element) {
+        waitVisibility(element);
+        new Actions(driver).moveToElement(element).perform();
     }
 }

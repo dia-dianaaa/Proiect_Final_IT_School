@@ -1,0 +1,49 @@
+<dataSets>
+    <dataSet_1>
+        <signupKey>dataSet_1</signupKey>
+        <firstProduct>Top</firstProduct>
+        <secondProduct>Jeans</secondProduct>
+        <comment>Please deliver during the day</comment>
+        <nameOnCard>Diana Test</nameOnCard>
+        <cardNumber>4111111111111111</cardNumber>
+        <cvc>123</cvc>
+        <expiryMonth>12</expiryMonth>
+        <expiryYear>2030</expiryYear>
+    </dataSet_1>
+
+    <dataSet_2>
+        <signupKey>dataSet_2</signupKey>
+        <firstProduct>Dress</firstProduct>
+        <secondProduct>Saree</secondProduct>
+        <comment></comment>
+        <nameOnCard>John Smith</nameOnCard>
+        <cardNumber>5555555555554444</cardNumber>
+        <cvc>456</cvc>
+        <expiryMonth>06</expiryMonth>
+        <expiryYear>2029</expiryYear>
+    </dataSet_2>
+
+    <dataSet_3>
+        <signupKey>dataSet_3</signupKey>
+        <firstProduct>Tshirt</firstProduct>
+        <secondProduct>Top</secondProduct>
+        <comment>Leave at the front door</comment>
+        <nameOnCard>Priya Sharma</nameOnCard>
+        <cardNumber>4000056655665556</cardNumber>
+        <cvc>789</cvc>
+        <expiryMonth>09</expiryMonth>
+        <expiryYear>2031</expiryYear>
+    </dataSet_3>
+
+    <dataSet_4>
+        <signupKey>dataSet_4</signupKey>
+        <firstProduct>Jeans</firstProduct>
+        <secondProduct>Dress</secondProduct>
+        <comment>Call before delivery</comment>
+        <nameOnCard>Liam Brown</nameOnCard>
+        <cardNumber>5105105105105100</cardNumber>
+        <cvc>321</cvc>
+        <expiryMonth>03</expiryMonth>
+        <expiryYear>2028</expiryYear>
+    </dataSet_4>
+</dataSets>
