@@ -22,6 +22,8 @@ public class TestBasePage {
         LoggerUtility.infoTestCase("===== The browser started successfully");
         LoggerUtility.startTestCase(testName);
         driver.get("https://automationexercise.com/");
+        driver.manage().deleteAllCookies();   // start every test logged out
+        driver.navigate().refresh();
     }
 
     @AfterMethod

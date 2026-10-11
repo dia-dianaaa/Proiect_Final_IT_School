@@ -1,5 +1,6 @@
 package Tests;
 
+import Logger.LoggerUtility;
 import ObjectData.ProductsSearchData;
 import Pages.HomepagePage;
 import Pages.ProductsPage;
@@ -17,15 +18,20 @@ public class ProductsSearchTest extends TestBasePage {
     @Test
     public void searchProductTest() {
 
+        LoggerUtility.infoTestCase("Load Product search dataset");
         productsSearchDataMap = XmlDataLoader.loadData("src/test/resources/ProductsSearchData.xml", ProductsSearchData.class);
         ProductsSearchData data = productsSearchDataMap.get("dataSet_2");
 
+        LoggerUtility.infoTestCase("In the homepage handle the consent popup and enter on the products page");
         HomepagePage homePage = new HomepagePage(getDriver());
         homePage.handleConsentPopup();
         homePage.clickProducts();
 
+        LoggerUtility.infoTestCase("Search for '" + data.getProductSearch() + "'");
         ProductsPage productsPage = new ProductsPage(getDriver());
         productsPage.searchProduct(data.getProductSearch());
+
+        LoggerUtility.infoTestCase("Verify the search results");
         productsPage.verifySearchResults(data);
     }
 }
