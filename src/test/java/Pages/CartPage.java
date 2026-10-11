@@ -60,6 +60,10 @@ public class CartPage {
         elementMethods.waitInvisibility(row);
     }
 
+    private String clean(String text) {
+        return text.replaceAll("[\\s\\u00A0]+", " ").trim();
+    }
+
     public void verifyProductRemoved(String productName, int remainingRows) {
         Assert.assertEquals(cartRows.size(), remainingRows,
                 "The cart should have " + remainingRows + " row(s) after removing " + productName);
