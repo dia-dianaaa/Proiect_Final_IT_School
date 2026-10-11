@@ -1,5 +1,6 @@
 package HelperMethods;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -26,6 +27,12 @@ public class ElementMethods {
         waitVisibility(element);
         element.click();
     }
+
+    public void scrollToElement(WebElement element) {
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({block: 'center'});", element);
+    }
+
 
     public void enterText(WebElement element, String text) {
         waitVisibility(element);

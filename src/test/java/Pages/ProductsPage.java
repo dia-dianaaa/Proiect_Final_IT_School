@@ -37,6 +37,7 @@ public class ProductsPage {
 
     public void searchProduct(String term) {
         elementMethods.enterText(searchBar, term);
+        elementMethods.scrollToElement(searchButton);
         elementMethods.clickOnElement(searchButton);
     }
 
