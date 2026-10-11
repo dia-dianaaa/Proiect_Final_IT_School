@@ -27,6 +27,10 @@ public class CartPage {
         PageFactory.initElements(driver, this);
     }
 
+    private String clean(String text) {
+        return text.replaceAll("[\\s\\u00A0]+", " ").trim();
+    }
+
     public void verifyProducts(List<String> expectedNames) {
         elementMethods.waitVisibility(proceedToCheckoutButton);
         Assert.assertEquals(cartRows.size(), expectedNames.size(),
@@ -34,7 +38,7 @@ public class CartPage {
         for (String expected : expectedNames) {
             boolean found = false;
             for (WebElement cartName : cartProductNames) {
-                if (cartName.getText().equals(expected)) {
+                if (clean(cartName.getText()).equals(expected)) {
                     found = true;
                     break;
                 }
@@ -58,10 +62,6 @@ public class CartPage {
         WebElement deleteButton = row.findElement(By.xpath(".//a[contains(@class,'cart_quantity_delete')]"));
         elementMethods.clickOnElement(deleteButton);
         elementMethods.waitInvisibility(row);
-    }
-
-    private String clean(String text) {
-        return text.replaceAll("[\\s\\u00A0]+", " ").trim();
     }
 
     public void verifyProductRemoved(String productName, int remainingRows) {

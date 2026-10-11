@@ -7,12 +7,15 @@ import ObjectData.SignupData;
 import Pages.*;
 import SharedData.Browser.TestBasePage;
 import XmlReader.XmlDataLoader;
+import com.aventstack.chaintest.plugins.ChainTestListener;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Listeners(ChainTestListener.class)
 public class CheckoutTest extends TestBasePage {
 
     Map<String, SignupData> signupDataObjectMap;

@@ -6,11 +6,14 @@ import Pages.HomepagePage;
 import Pages.ProductsPage;
 import SharedData.Browser.TestBasePage;
 import XmlReader.XmlDataLoader;
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import org.openqa.selenium.JavascriptExecutor;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.util.Map;
 
+@Listeners(ChainTestListener.class)
 public class ProductsSearchTest extends TestBasePage {
 
     Map<String, ProductsSearchData> productsSearchDataMap;
