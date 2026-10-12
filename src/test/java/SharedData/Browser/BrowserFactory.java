@@ -1,5 +1,6 @@
 package SharedData.Browser;
 
+import Logger.LoggerUtility;
 import org.openqa.selenium.WebDriver;
 
 public class BrowserFactory {
@@ -7,6 +8,7 @@ public class BrowserFactory {
     public WebDriver getBrowserFactory() {
 
         String browser = System.getProperty("browser", BrowserType.BROWSER_CHROME);
+        LoggerUtility.infoTestCase("Browser: " + browser);
 
         switch(browser){
             case BrowserType.BROWSER_CHROME:
