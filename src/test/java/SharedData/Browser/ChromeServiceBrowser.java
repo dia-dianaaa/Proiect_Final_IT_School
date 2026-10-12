@@ -30,6 +30,7 @@ public class ChromeServiceBrowser implements IBrowserService{
                 + "MAP googlesyndication.com 0.0.0.0, "
                 + "MAP googleadservices.com 0.0.0.0, "
                 + "MAP google_vignette 0.0.0.0");
+
         String ciCd = System.getProperty("ci_cd");
 
         if(Boolean.parseBoolean(ciCd))

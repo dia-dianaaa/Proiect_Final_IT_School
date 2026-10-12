@@ -1,5 +1,4 @@
 <dataSets>
-    <!-- Broad keywords: several products match each one -->
     <dataSet_1>
         <productSearch>Top</productSearch>
         <expectedFragment>Top</expectedFragment>
@@ -30,7 +29,6 @@
         <shouldFindResults>true</shouldFindResults>
     </dataSet_5>
 
-    <!-- Terms with no matching product: expect zero results -->
     <dataSet_6>
         <productSearch>zzz_not_a_product</productSearch>
         <expectedFragment></expectedFragment>

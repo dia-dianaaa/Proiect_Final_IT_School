@@ -19,6 +19,22 @@ public class EdgeServiceBrowser implements IBrowserService{
         options.addArguments("--disable-gpu");
         options.addArguments("start-maximized");
         options.addArguments("no-sandbox");
+        // block ad domains, the same way as in ChromeServiceBrowser
+        options.addArguments("--host-resolver-rules="
+                + "MAP googleads.g.doubleclick.net 0.0.0.0, "
+                + "MAP doubleclick.net 0.0.0.0, "
+                + "MAP securepubads.g.doubleclick.net 0.0.0.0, "
+                + "MAP pagead2.googlesyndication.com 0.0.0.0, "
+                + "MAP tpc.googlesyndication.com 0.0.0.0, "
+                + "MAP googlesyndication.com 0.0.0.0, "
+                + "MAP googleadservices.com 0.0.0.0, "
+                + "MAP google_vignette 0.0.0.0");
+        String ciCd = System.getProperty("ci_cd");
+
+        if(Boolean.parseBoolean(ciCd))
+        {
+            options.addArguments("--headless");
+        }
         return options;
     }
 
