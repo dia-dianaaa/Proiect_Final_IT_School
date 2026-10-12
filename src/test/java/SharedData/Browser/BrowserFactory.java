@@ -6,7 +6,7 @@ public class BrowserFactory {
 
     public WebDriver getBrowserFactory() {
 
-        String browser = System.getProperty("browser");
+        String browser = System.getProperty("browser", BrowserType.BROWSER_EDGE);
 
         switch(browser){
             case BrowserType.BROWSER_CHROME:

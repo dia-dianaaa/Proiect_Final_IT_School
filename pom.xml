@@ -88,10 +88,6 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>${suiteXmlFile}.xml</suiteXmlFile>
                         </suiteXmlFiles>
-                        <systemPropertyVariables>
-                            <browser>chrome</browser>
-                            <ci_cd>false</ci_cd>
-                        </systemPropertyVariables>
                     </configuration>
                 </plugin>
             </plugins>
