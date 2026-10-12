@@ -20,21 +20,20 @@ public class ProductsSearchTest extends TestBasePage {
 
     @Test
     public void searchProductTest() {
-
-        LoggerUtility.infoTestCase("Load Product search dataset");
         productsSearchDataMap = XmlDataLoader.loadData("src/test/resources/ProductsSearchData.xml", ProductsSearchData.class);
         ProductsSearchData data = productsSearchDataMap.get("dataSet_2");
+        LoggerUtility.infoTestCase("Loaded Product search dataset");
 
-        LoggerUtility.infoTestCase("In the homepage handle the consent popup and enter on the products page");
         HomepagePage homePage = new HomepagePage(getDriver());
         homePage.handleConsentPopup();
         homePage.clickProducts();
+        LoggerUtility.infoTestCase("In the homepage handled the consent popup and entered on the products page");
 
-        LoggerUtility.infoTestCase("Search for '" + data.getProductSearch() + "'");
         ProductsPage productsPage = new ProductsPage(getDriver());
         productsPage.searchProduct(data.getProductSearch());
+        LoggerUtility.infoTestCase("Searched for '" + data.getProductSearch() + "'");
 
-        LoggerUtility.infoTestCase("Verify the search results");
         productsPage.verifySearchResults(data);
+        LoggerUtility.infoTestCase("Verified the search results");
     }
 }
